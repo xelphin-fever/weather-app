@@ -1,0 +1,33 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xelphin-fever/weather-app.git"
+  },
+  "keywords": [],
+  "author": "xelphin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xelphin-fever/weather-app/issues"
+  },
+  "homepage": "https://github.com/xelphin-fever/weather-app#readme",
+  "devDependencies": {
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.2.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100
+  }
+}

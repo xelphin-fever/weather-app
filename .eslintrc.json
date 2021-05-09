@@ -1,0 +1,7 @@
+{   
+  "extends": "airbnb-base", //(with React it’s just “airbnb”)
+  "env": {
+          "browser": true
+  }
+}
+
