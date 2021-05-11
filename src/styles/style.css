@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(180, 120, 63);
+}
+
+body {
+  background-color: rgb(240, 226, 214);
+  padding: 20px;
+}
+
+/*  MAIN  */
+#div-main {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+#div-main-top {
+  display: flex;
+  flex-direction: row;
+}
+#span-main-temp {
+  font-size: 10vw;
+}
+#span-main-unit {
+  font-size: 5vw;
+}
+#div-maxmin-temp {
+  font-size: 1vw;
+  margin-left: 15px;
+  margin-top: 25px;
+}
+.span-maxmin-unit {
+  font-size: 15px;
+}
+
+#input-location {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+}
+#input-location:focus {
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  text-decoration-color: rgb(209, 172, 137);
+}
+
+/*  EXTRA  */
+#div-extra {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 3vh;
+  left: 50px;
+}
+.div-inner-extra {
+  display: flex;
+  flex-direction: row;
+  margin-right: 15px;
+}
+.extra-icon {
+  font-size: 7vw;
+}
+.div-extra-text h2 {
+  font-size: 2vw;
+}
+
+/*  TOGGLE  */
+#div-toggle {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*  ICON  */
+#div-icon {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  right: 1%;
+  z-index: -1;
+}
+#img-icon {
+  width: 900px;
+}
