@@ -1,4 +1,4 @@
-const gifData = (() => {
+const gifFind = (() => {
   // Variables
   // Fetch
   const fetchData = async (description) => {
@@ -24,4 +24,4 @@ const gifData = (() => {
   };
 })();
 
-export default gifData;
+export default gifFind;

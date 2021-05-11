@@ -1,5 +1,5 @@
 import weatherData from './weather';
-import gifData from './gifFind';
+import gifFind from './gifFind';
 
 const tempConverter = (() => {
   // Update to Current Unit
@@ -77,7 +77,7 @@ const displayController = (() => {
   };
   // Get GIF
   const getGif = (desc) => {
-    const promiseGif = gifData.fetchData(desc);
+    const promiseGif = gifFind.fetchData(desc);
     promiseGif.then((result) => {
       gif.src = result.data.images.original.url;
     });
@@ -92,7 +92,7 @@ const displayController = (() => {
     wind.textContent = file.wind.speed;
     cloud.textContent = file.clouds.all;
     feelTemp.textContent = tempConverter.kelToFar(file.main.feels_like);
-    icon.src = `http://openweathermap.org/img/wn/${file.weather[0].icon}@2x.png`;
+    icon.src = `https://openweathermap.org/img/wn/${file.weather[0].icon}@2x.png`;
     getGif(file.weather[0].description);
     description.textContent = file.weather[0].description;
     if (currentUnit === 1) {
