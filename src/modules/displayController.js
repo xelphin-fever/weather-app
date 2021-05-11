@@ -101,14 +101,12 @@ const displayController = (() => {
     let newLocation = location.value;
     newLocation = newLocation.split(',');
     const city = newLocation[0].trim();
-    console.log('my city is:', city);
     let country = '';
     if (newLocation.length === 2) {
       country = newLocation[1].trim();
     }
     const promiseWeather = weatherData.fetchData(city, country);
     promiseWeather.then((result) => {
-      console.log('console JSON: ', result);
       updateDisplayAgree(result);
     });
   };
