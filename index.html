@@ -7,6 +7,72 @@
   <title>Weather App</title>
 </head>
 <body>
+  <!--MAIN (TOP-LEFT)-->
+  <div id="div-main">
+        <div id="div-main-top">
+      <div id="div-main-temp"><span id="span-main-temp">17</span><span class="chosen-unit" id="span-main-unit">&#8457;</span></div>
+      <div id="div-maxmin-temp">
+        <h2>Max: <span id="span-max-temp">18</span><span class="chosen-unit span-maxmin-unit">&#8457;</span></h2>
+        <h2>Min: <span id="span-min-temp">16</span><span class="chosen-unit span-maxmin-unit">&#8457;</span></h2>
+      </div>
+    </div>
+    <div id="div-main-bottom">
+      <div id="div-input">
+        <input id="input-location" type="text" placeholder="🔍 City or City, Country" value="London">
+      </div>
+      <div>
+        <h2><span id="span-weather-desc">Clear Sky</span></h2>
+      </div>
+      <div id="div-date">
+        <h2><span id="span-date">Monday, 10th of May</span></h2>
+      </div>
+    </div>
+  </div>
+  <!--EXTRA (BOTTOM-LEFT)-->
+  <div id="div-extra">
+    <div class="div-inner-extra">
+      <h2><span class="material-icons extra-icon">&#xE798;</span></h2>
+      <div class="div-extra-text">
+        <h2 class="title-extra">Humidity</h2>
+        <h2><span id="span-humidity">33</span></h2>
+      </div>
+    </div>
+    <div class="div-inner-extra">
+      <h2><span class="material-icons extra-icon">&#xEFD8;</span></h2>
+      <div class="div-extra-text">
+        <h2 class="title-extra">Wind Speed</h2>
+        <h2><span id="span-wind">33</span></h2>
+      </div>
+    </div>
+    <div class="div-inner-extra">
+      <h2><span class="material-icons extra-icon">&#xE2BD;</span></h2>
+      <div class="div-extra-text">
+        <h2 class="title-extra">Cloudiness</h2>
+        <h2><span id="span-cloud"> 33</span>%</h2>
+      </div>
+    </div>
+    <div class="div-inner-extra">
+      <h2><span class="material-icons extra-icon">&#xE1FF;</span></h2>
+      <div class="div-extra-text">
+        <h2 class="title-extra">Feels Like</h2>
+        <h2><span id="span-feels">33</span><span class="chosen-unit">&#8457;</span></h2>
+      </div>
+    </div>
+  </div>
+  <!--TOGGLE-->
+  <div id="div-toggle">
+    <label class="switch">
+      <input type="checkbox" id="unit-selector">
+      <span class="slider round"></span>
+    </label>
+    <h2><span id="span-temp-unit">Fahrenheit</span></h2>
+  </div>
+  <!--ICON-->
+  <div id="div-icon">
+    
+    <div><img src="" alt=" weather icon" id="img-icon"></div>
+  </div>
+  <!--SCRIPT-->
   <script src="bundle.js"></script>
 </body>
 </html>
