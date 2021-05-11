@@ -6,13 +6,13 @@ const weatherData = (() => {
       let response = '';
       if (country === '') {
         response = await fetch(
-          ` http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=2f6cc1ec688d89ab8cca0c9955d6b931`,
+          ` https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=2f6cc1ec688d89ab8cca0c9955d6b931`,
           { mode: 'cors' }
         );
       } else {
         console.log('entered city and country');
         response = await fetch(
-          `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=2f6cc1ec688d89ab8cca0c9955d6b931`,
+          `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=2f6cc1ec688d89ab8cca0c9955d6b931`,
           { mode: 'cors' }
         );
       }
