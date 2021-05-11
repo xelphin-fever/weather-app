@@ -1,4 +1,5 @@
 import weatherData from './weather';
+import gifData from './gifFind';
 
 const tempConverter = (() => {
   // Update to Current Unit
@@ -31,6 +32,7 @@ const displayController = (() => {
   const units = [...document.querySelectorAll('.chosen-unit')];
   const description = document.querySelector('#span-weather-desc');
   const icon = document.querySelector('#img-icon');
+  const gif = document.querySelector('#img-gif');
   // Input Variables
   const location = document.querySelector('#input-location');
   const unitSelector = document.querySelector('#unit-selector');
@@ -73,6 +75,13 @@ const displayController = (() => {
       });
     }
   };
+  // Get GIF
+  const getGif = (desc) => {
+    const promiseGif = gifData.fetchData(desc);
+    promiseGif.then((result) => {
+      gif.src = result.data.images.original.url;
+    });
+  };
   // Update Display
   const updateDisplay = (file) => {
     mainTemp.textContent = tempConverter.kelToFar(file.main.temp);
@@ -84,6 +93,7 @@ const displayController = (() => {
     cloud.textContent = file.clouds.all;
     feelTemp.textContent = tempConverter.kelToFar(file.main.feels_like);
     icon.src = `http://openweathermap.org/img/wn/${file.weather[0].icon}@2x.png`;
+    getGif(file.weather[0].description);
     description.textContent = file.weather[0].description;
     if (currentUnit === 1) {
       flipDisplayUnits();

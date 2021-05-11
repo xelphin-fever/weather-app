@@ -95,3 +95,15 @@ body {
 #img-icon {
   width: 900px;
 }
+
+#div-gif {
+  position: absolute;
+  top: 45%;
+  left: 40px;
+  z-index: -2;
+}
+
+#img-gif {
+  width: 300px;
+  border-radius: 10%;
+}
